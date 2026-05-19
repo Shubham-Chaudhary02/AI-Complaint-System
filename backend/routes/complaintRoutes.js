@@ -16,14 +16,14 @@ router.post("/", protect, addComplaint);
 
 router.get("/", protect, getComplaints);
 
-router.put("/:id", protect, updateComplaintStatus);
-
-router.delete("/:id", protect, deleteComplaint);
-
 router.get(
   "/search/location",
   protect,
   searchComplaintByLocation
 );
+
+router.put("/:id", protect, updateComplaintStatus);
+
+router.delete("/:id", protect, deleteComplaint);
 
 module.exports = router;
